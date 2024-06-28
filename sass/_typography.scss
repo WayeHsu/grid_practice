@@ -1,0 +1,80 @@
+%hover {
+  &:hover {
+    cursor: pointer;
+    color: $color-grey-light-1;
+  }
+}
+
+.heading-1 {
+  font-size: $font-huge;
+  font-weight: 400;
+  line-height: 1;
+  color: $color-grey-dark-1;
+  @extend %hover;
+}
+.heading-2 {
+  font-size: $font-large;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  @extend %hover;
+}
+.heading-3 {
+  font-size: $font-medium;
+  color: $color-grey-dark-1;
+  font-weight: 700;
+  line-height: 1.2;
+  @extend %hover;
+}
+.heading-4 {
+  font-size: $font-normal;
+  color: $color-grey-dark-1;
+  font-weight: 700;
+  line-height: 1.2;
+  @extend %hover;
+}
+.heading-5 {
+  font-family: $font-sans-serif;
+  font-size: $font-small;
+  color: $color-grey-dark-1;
+  font-weight: 700;
+  margin: $space-mini 0;
+}
+
+.text {
+  font-size: $font-small;
+  color: $color-grey-light-1;
+  line-height: 1.8rem;
+  cursor: pointer;
+}
+
+.text-small {
+  font-size: $font-mini;
+  font-family: $font-sans-serif;
+  color: $color-grey-dark-1;
+}
+
+.text-important {
+  font-family: $font-sans-serif;
+  font-size: $font-mini;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: $color-red-light;
+}
+
+.text-highlight {
+  font-family: $font-sans-serif;
+  font-weight: 700;
+  font-size: $font-mini;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+}
+
+.text-legend {
+  font-family: $font-sans-serif;
+  font-weight: 300;
+  font-size: $font-mini;
+  color: $color-grey-light-2;
+  justify-self: end;
+}

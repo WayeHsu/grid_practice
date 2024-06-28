@@ -1,0 +1,172 @@
+.header {
+  margin-top: $space-mini;
+  font-family: $font-sans-serif;
+  font-size: $font-mini;
+}
+.header-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  @media only screen and(max-width:$bp-medium) {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-self: center;
+  }
+  &__link {
+    padding: 4px 6px;
+    margin: 0 0.4vw;
+    @include link(background-color);
+  }
+  &__icons {
+    display: flex;
+  }
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: $space-small;
+    cursor: pointer;
+  }
+  &__btns {
+    justify-self: end;
+  }
+  &__btn {
+    @include btn-primary;
+    margin-left: $space-mini;
+  }
+}
+.header-middle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: $space-mini 0;
+  border-bottom: $border-light;
+
+  @media only screen and(max-width:$bp-medium) {
+    display: none;
+  }
+
+  &__info {
+    justify-self: end;
+  }
+  &__logo {
+    width: 95%;
+    justify-self: center;
+  }
+  &__text {
+    line-height: 1.5;
+    &--bold {
+      font-weight: 700;
+    }
+    &--grey {
+      color: $color-grey-light-2;
+    }
+    &--important {
+      color: $color-red-dark;
+    }
+  }
+  &__icon {
+    width: 1.8rem;
+    height: 100%;
+    color: $color-grey-light-3;
+    margin-right: 5px;
+  }
+}
+
+.navigation-menu {
+  @include borderdouble(black);
+  @media only screen and(max-width:$bp-medium) {
+    display: none;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 0 10px 0;
+  }
+  &__link {
+    //@include link-background;
+    @include link(background-color);
+    padding: 4px 6px;
+    margin: 0 6px;
+  }
+}
+
+.navigation-live {
+  display: flex;
+  justify-content: center;
+  padding: $space-mini 0;
+  border-bottom: $border-dark;
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+  &__link {
+    font-weight: 700;
+    margin-right: $space-mini;
+    @include link(text-color);
+    &--highlight {
+      font-weight: 400;
+      color: $color-red;
+      @media only screen and(max-width:$bp-mini){
+        display: none;
+      }
+    }
+  }
+  &__text-important {
+    font-weight: 700;
+    margin: 0 $space-mini;
+  }
+}
+
+.header-mobile {
+  @media only screen and(min-width:$bp-medium) {
+    display: none;
+  }
+}
+.header-mobile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: $space-mini;
+  border-bottom: $border-light;
+
+  &__logo {
+    width: 30vw;
+    display: block;
+  }
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.header-mobile-bottom {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: $space-mini 0;
+  border-bottom: $border-light;
+  @media only screen and(max-width:$bp-mini) {
+    position: static;
+    justify-content: flex-start;
+  }
+  &__text {
+    font-weight: 700;
+    &::after {
+      content: "subscribe for $0.25/week";
+      font-weight: 300;
+      color: $color-blue-dark;
+      position: absolute;
+      right: 0vw;
+      @media only screen and(max-width:$bp-mini){
+        right: 5vw;
+      }
+    }
+  }
+}

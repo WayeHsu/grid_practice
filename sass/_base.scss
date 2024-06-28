@@ -1,0 +1,134 @@
+// COLOR
+$color-grey-dark-1: rgb(20, 20, 20);
+$color-grey-dark-2: rgb(42, 40, 40);
+$color-grey-light-1: rgb(108, 105, 105);
+$color-grey-light-2: rgb(159, 152, 152);
+$color-grey-light-3: rgb(222, 222, 222);
+$color-red-dark: rgb(131, 39, 6);
+$color-red: rgb(217, 57, 17);
+$color-red-light: rgb(212, 76, 26);
+$color-blue: rgb(102, 123, 169);
+$color-blue-dark: rgb(76, 92, 125);
+
+// FONT FAMILY
+$font-primary: "Cardo", serif;
+$font-sans-serif: "Lato", sans-serif;
+$font-condensed: "Old Standard TT", serif;
+
+// GENERAL SPACE
+$space-mini: 1.2rem;
+$space-small: 2rem;
+$space-regular: 3.2rem;
+$space-medium: 5rem;
+$space-large: 10rem;
+
+// SINGLE BORDER
+$border-dark: 1px solid $color-grey-light-2;
+$border-light: 1px solid $color-grey-light-3;
+
+// FONT SIZE
+$font-mini: 1.1rem;
+$font-small: 1.4rem;
+$font-normal: 1.6rem;
+$font-medium: 1.8rem;
+$font-large: 2.2rem;
+$font-huge: 2.6rem;
+
+// SCREEN SIZE
+$bp-large: 75em; //1200/16
+$bp-medium: 60em; //960/16
+$bp-small: 48em; //768/16
+$bp-mini: 37.5em; //600/16
+
+// GLOBAL STYLE //
+*,
+*::before *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+//css reset
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and(max-width:$bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80vw;
+  margin: auto;
+  display: grid;
+
+  @media only screen and(max-width:$bp-large) {
+    width: 95vw;
+  }
+  @media only screen and(max-width:$bp-mini){
+    width: 90vw;
+  }
+}
+
+.photo {
+  aspect-ratio: 16 / 9; //固定照片比例，這個好用！
+  object-fit: cover;
+}
+
